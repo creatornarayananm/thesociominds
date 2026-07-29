@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/socio-minds-logo.png.asset.json";
 import {
   Globe,
   Server,
@@ -20,6 +19,8 @@ import {
   CheckCircle2,
   Sparkles,
 } from "lucide-react";
+
+const logo = "/socio-minds-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Brochure,
@@ -58,7 +59,7 @@ function Brochure() {
     <div className="min-h-screen bg-background">
       <header className="mx-auto max-w-6xl px-6 pt-8">
         <div className="flex items-center justify-between">
-          <img src={logoAsset.url} alt="The Socio Minds" className="h-12 md:h-14 w-auto" />
+          <img src={logo} alt="The Socio Minds" className="h-12 md:h-14 w-auto" />
           <a
             href="mailto:thesociominds@gmail.com"
             className="hidden md:inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -208,7 +209,7 @@ function Brochure() {
       <footer className="border-t border-border mt-10">
         <div className="mx-auto max-w-6xl px-6 py-10 grid gap-8 md:grid-cols-3 text-sm">
           <div>
-            <img src={logoAsset.url} alt="The Socio Minds" className="h-10 w-auto" />
+            <img src={logo} alt="The Socio Minds" className="h-10 w-auto" />
             <p className="mt-3 text-muted-foreground">
               Helping small businesses launch and grow online.
             </p>
